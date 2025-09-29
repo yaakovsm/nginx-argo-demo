@@ -7,12 +7,12 @@ spec:
     namespace: my-project
     server: https://kubernetes.default.svc
   source:
-    path: 'nginx-argocd/nginx-chart'
+    path: 'nginx-chart'
     repoURL: https://github.com/yaakovsm/nginx-argo-demo.git
     targetRevision: main
     helm:
       valueFiles:
-        - nginx-argocd/environments/prod/values-prod.yaml
+        - environments/prod/values-prod.yaml
   project: default
   syncPolicy:
     automated:
