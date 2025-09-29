@@ -3,7 +3,7 @@ replicaCount: 3
 image:
   repository: nginx
   pullPolicy: IfNotPresent
-  tag: ""
+  tag: "1.26"
 
 service:
   port: 80
