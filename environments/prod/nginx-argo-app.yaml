@@ -7,7 +7,7 @@ spec:
     namespace: my-project
     server: https://kubernetes.default.svc
   source:
-    path: 'practice/nginx-argocd/nginx-chart'
+    path: 'nginx-argocd/nginx-chart'
     repoURL: https://github.com/yaakovsm/nginx-argo-demo.git
     targetRevision: main
     helm:
