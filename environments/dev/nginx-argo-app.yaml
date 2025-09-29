@@ -6,14 +6,16 @@ spec:
   destination:
     namespace: my-project
     server: https://kubernetes.default.svc
+  project: default
   source:
-    path: nginx-chart
     repoURL: https://github.com/yaakovsm/nginx-argo-demo.git
     targetRevision: main
+    ref: values
+    path: nginx-chart
     helm:
       valueFiles:
-        - environments/dev/values-dev.yaml
-  project: default
+        - $values/environments/dev/values-dev.yaml
+  
   syncPolicy:
     automated:
       prune: false
