@@ -1,21 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-dev
+  name: nginx-prod
 spec:
   destination:
     namespace: my-project
     server: https://kubernetes.default.svc
   source:
-    path: 'practice/nginx-argocd/environments/dev/nginx-argo-app.yaml'
+    path: 'practice/nginx-argocd/environments/prod/nginx-argo-app.yaml'
     repoURL: https://github.com/yaakovsm/nginx-argo-demo.git
     targetRevision: main
     helm:
       valueFiles:
-        - practice/nginx-argocd/environments/dev/values-dev.yaml
+        - practice/nginx-argocd/environments/prod/values-prod.yaml
   project: default
   syncPolicy:
     automated:
       prune: false
       selfHeal: true
-      enabled: true
+      enabled: false
