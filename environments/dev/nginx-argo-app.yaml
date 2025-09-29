@@ -3,19 +3,20 @@ kind: Application
 metadata:
   name: nginx-dev
 spec:
+  project: default
   destination:
     namespace: my-project
     server: https://kubernetes.default.svc
   source:
-    path: .
     repoURL: https://github.com/yaakovsm/nginx-argo-demo.git
     targetRevision: main
+    path: nginx-chart
     helm:
       valueFiles:
         - environments/dev/values-dev.yaml
-  project: default
   syncPolicy:
     automated:
       prune: false
       selfHeal: true
-      enabled: true
+    syncOptions:
+      - CreateNamespace=true
