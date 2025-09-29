@@ -7,7 +7,7 @@ spec:
     namespace: my-project
     server: https://kubernetes.default.svc
   source:
-    path: 'practice/nginx-argocd/environments/prod/nginx-argo-app.yaml'
+    path: 'practice/nginx-argocd/environments/prod'
     repoURL: https://github.com/yaakovsm/nginx-argo-demo.git
     targetRevision: main
     helm:
