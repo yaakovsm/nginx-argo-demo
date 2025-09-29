@@ -12,7 +12,7 @@ spec:
     targetRevision: main
     helm:
       valueFiles:
-        - practice/nginx-argocd/environments/dev/values-dev.yaml
+        - nginx-argocd/environments/dev/values-dev.yaml
   project: default
   syncPolicy:
     automated:
