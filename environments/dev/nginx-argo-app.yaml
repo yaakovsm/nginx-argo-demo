@@ -7,7 +7,7 @@ spec:
     namespace: my-project
     server: https://kubernetes.default.svc
   source:
-    path: 'manifests'
+    path: '/home/yaakovsm/bootcamp/practice/nginx-argocd/manifests'
     repoURL: https://github.com/yaakovsm/nginx-argo-demo.git
     targetRevision: main
   project: default
